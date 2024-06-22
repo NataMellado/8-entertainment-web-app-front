@@ -1,0 +1,141 @@
+.title {
+  padding-bottom: 24px;
+}
+
+.mediaList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  row-gap: 32px;
+  column-gap: 40px;
+}
+
+.mediaItem {
+  position: relative;
+}
+
+.mediaThumbnail {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: filter 0.3s ease-out;
+  pointer-events: none;
+}
+
+.mediaItem:hover .mediaThumbnail {
+  filter: brightness(60%);
+}
+
+.mediaDetails {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0 5px 0;
+  font-size: var(--bodyS);
+  color: rgba(255, 255, 255, 0.661);
+}
+
+.mediaTypeContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mediaTypeIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.mediaTitle {
+  font-size: var(--headingXS);
+  font-weight: var(--fw-medium);
+}
+
+.playBtn {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 9px 24px 9px 9px;
+  border-radius: 28.5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  font-size: var(--headingXS);
+  font-weight: var(--fw-medium);
+}
+
+.mediaItem:hover .playBtn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.playBtnImg {
+  pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  .playBtn {
+    padding: 7px 15px 7px 7px;
+    border-radius: 28.5px;
+    gap: 12px;
+    font-size: var(--headingXXS);
+  }
+
+  .playBtnImg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .container {
+      padding: 0px 24px 0 24px;
+
+  }
+
+  .mediaList {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 24px;
+    column-gap: 29px;
+  }
+
+  .playBtn {
+    top: 38%;
+  }
+
+  .mediaDetails {
+    gap: 6px;
+  }
+
+  
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 0px 16px 0 16px;
+  }
+  .mediaList {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+    column-gap: 16px;
+  }
+
+  .mediaDetails {
+    font-size: var(--bodyXXS);
+  }
+
+  .mediaTitle {
+    font-size: var(--headingXXS);
+  }
+
+}
+
+
+

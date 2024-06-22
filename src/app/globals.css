@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('../../public/fonts/Outfit.ttf') format('truetype');
+}
+
+:root {
+  /* Colors */
+  --clr-red: #FC4747;
+  --clr-semi-dark-blue: #161D2F;
+  --clr-greyish-blue: #5A698F;
+  --clr-dark-blue: #10141E;
+  --clr-dark-blue-rgb: 16, 20, 30; 
+
+  /* Font family */
+  --ff-pr: 'Outfit', sans-serif;
+
+  /* Font sizes */
+  --bodyXXS: 11px;
+  --bodyXS: 12px;
+  --bodyS: 13px;
+  --bodyM: 15px;
+  --headingXXS: 15px;
+  --headingXS: 18px;
+  --headingS2: 20px;
+  --headingS: 24px;
+  --headingM: 24px;
+  --headingL: 32px;
+
+  /* Font weight */
+  --fw-light: 300;
+  --fw-medium: 500;
+
+  /* Border radius */
+  --br-20: 20px;
+
+  /* Filter for svg */
+  --filter-base: brightness(0) saturate(100%) invert(42%) sepia(7%) saturate(2257%) hue-rotate(186deg) brightness(92%) contrast(85%);
+  --filter-hover: brightness(0) saturate(100%) invert(41%) sepia(66%) saturate(3725%) hue-rotate(336deg) brightness(101%) contrast(100%);
+  --filter-active:  brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(321deg) brightness(103%) contrast(101%);
+
+
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff-pr);
+}
+
+
+
+html,
+body {
+  background: var(--clr-dark-blue);
+  color: white;
+
+}
+
+body {
+  padding: 32px;
+}
+
+main {
+  padding-left: 130px;
+  display: grid;
+}
+
+h1 {
+  font-size: var(--headingL);
+  font-weight: var(--fw-light);
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    padding: 0px;
+  }
+
+  body {
+    padding: 0px;
+  }
+
+  h1 {
+    font-size: var(--headingS);
+  }
+  
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: var(--headingS2);
+  }
+}
+
