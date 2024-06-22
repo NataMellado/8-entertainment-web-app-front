@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './BookmarkBtn.module.css';
+import styles from './bookmarkBtn.module.css';
 
 interface BookmarkBtnProps {
   isBookmarked: boolean;
